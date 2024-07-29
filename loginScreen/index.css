@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.ttf');
+}
+
+body {
+    background-image: url('images/pizza.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    height: 95vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    text-align: center;
+}
+
+#loginBox {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 15px;
+
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    font-size: 12.5px;
+    box-shadow: 0px 5px 15px black;
+
+    min-width: 300px;
+}
+
+#loginBox hr.loginHr {
+    border-top: 1px solid rgb(224, 224, 224);
+}
+
+#loginBox #userInput {
+    text-align: left;
+    padding-left: 5%;
+}
+
+#loginBox #userInput > input {
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border: 2px solid rgb(224, 224, 224);
+    min-width: 235px;
+
+    box-shadow: 0px 10px 15px rgb(231, 231, 231);
+
+    font-family: Poppins, sans-serif;
+    border-radius: 5px;
+}
+
+#loginBox #userInput > input:focus {
+    border: 2px solid #ffaf01;
+    outline: none;
+}
+
+#username {
+    background: url('icons/user.svg') no-repeat left;
+    background-size: 10px;
+    background-position: 9px;
+
+    padding-left: 30px;
+}
+
+#password {
+    background: url('icons/lock.svg') no-repeat left;
+    background-size: 15px;
+    background-position: 6px;
+
+    padding-left: 30px;
+}
+
+#rememberForgot {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#rememberCheckbox {
+    accent-color: #E59D00;
+}
+
+#rememberMe {
+    display: flex;
+    align-items: center;
+}
+
+#rememberMe label {
+    margin-right: 3px;
+}
+
+#forgotPassword {
+    color: black;
+}
+
+#loginButton {
+    width: 90%;
+    height: 50px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(to bottom right,#ffaf01, #df4a14);
+    font-size: 20px;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    color: white;
+
+    box-shadow: 0px 10px 15px rgb(194, 194, 194);
+
+    cursor: pointer;
+}
+
+#loginButton:hover {
+    border: 2px solid rgb(224, 224, 224);
+    background: linear-gradient(to bottom right,#ffbc2d, #ff5d22);
+}

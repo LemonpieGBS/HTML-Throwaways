@@ -1,0 +1,86 @@
+@font-face {
+    font-family: Roboto;
+    src: url('fonts/Roboto-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(129, 129, 129);
+}
+
+#calculator {
+
+    font-family: 'Courier New';
+    background-color: #242424;
+
+    border-radius: 15px;
+    border: 2px solid white;
+    box-shadow: 3px 3px 5px black;
+
+    max-width: 365px;
+
+    overflow: hidden;
+
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 3rem;
+    text-align: left;
+    border: none;
+
+    background-color: #494949;
+    color: white;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+#calculator #keys button {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: 2px solid white;
+
+    background-color: #5a5a5a;
+    color: white;
+
+    box-shadow: 3px 3px 5px black;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#calculator #keys button:hover {
+    background-color: #6b6b6b;
+}
+
+#calculator #keys button:active {
+    background-color: white;
+    color: #5a5a5a;
+}
+
+#calculator #keys button.operators {
+    background-color: #ff9100;
+}
+
+#calculator #keys button.operators:hover {
+    background-color: #ffb95d;
+}
+
+#calculator #keys button.operators:active {
+    background-color: white;
+    color: #ff9100;
+}

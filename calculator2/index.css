@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('fonts/Rubik-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#calculatorArea {
+    background-color: rgba(0, 0, 0, 0.39);
+    display: grid;
+    grid-template-rows: 50px 1fr 5px 2fr;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 10px;
+    height: 75%;
+    width: 250px;
+}
+
+#calculatorArea #titleContainer {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculatorArea #titleContainer p {
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+}
+
+#calculatorArea #displayContainer {
+
+    resize: none;
+    overflow: hidden;
+    cursor: default;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 2rem;
+
+    font-family: 'Rubik', sans-serif;
+
+    background: rgba(0, 0, 0, 0.13);
+
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+#calculatorArea #displayContainer p {
+    margin: 0;
+    overflow: auto;
+}
+
+#calculatorArea hr {
+    visibility: hidden;
+}
+
+#calculatorArea #btnArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+#calculatorArea #btnArea #clearBtn {
+    grid-column: 1 / 5;
+}
+
+#calculatorArea #btnArea button {
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.151) 0%, rgba(0, 0, 0, 0.397) 100%);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+#calculatorArea #btnArea button:hover {
+    background-color: rgba(255, 255, 255, 0.514);
+}
+
+#calculatorArea #btnArea .operators {
+    background: linear-gradient(45deg, rgba(132, 0, 255, 0.205) 0%, rgba(140, 0, 255, 0.562) 100%);
+    color: white;
+}

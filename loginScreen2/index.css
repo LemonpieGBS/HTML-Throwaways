@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('fonts/IBMPlexMono-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body { margin: 0px; }
+
+#mainGrid {
+
+    --accent-color: #F52949;
+
+    display: grid;
+
+    height: 100vh;
+    width: 100vw;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: 1fr;
+
+    & #boxLeft {
+        background-image: url("images/wallpaper.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        overflow: hidden;
+
+        & > h1 {
+            text-align: center;
+            font-size: 50px;
+
+            text-wrap: nowrap;
+
+            font-family: 'IBM Plex Mono', sans-serif;
+            color: white;
+
+            text-shadow: 0px 5px 20px black;
+
+            & > #cursor {
+                display: inline-block;
+                transform: translateY(-5px);
+
+                animation: popInOut 1.5s infinite;
+            }
+        }
+    }
+
+    & #boxRight {
+        background-image: url("images/white.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        flex-direction: column;
+
+        font-family: 'Poppins', sans-serif;
+
+        justify-content: space-evenly;
+        align-items: center;
+
+        box-shadow: 10px 0px 50px black;
+
+        & > #signIn {
+            width: 80%;
+            text-align: center;
+            
+            & > h1 {
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+
+        & > #inputBoxes {
+            width: 80%;
+
+            & > input {
+                width: 100%;
+                padding: 7px;
+
+                font-family: 'Poppins', sans-serif;
+                font-size: 15px;
+
+                border: 2px solid white;
+                border-bottom: 2px solid gray;
+                box-shadow: 0px 5px 15px lightgray;
+
+                transition-duration: 0.25s;
+            }
+
+            & > input:hover {
+                border-bottom: 2px solid var(--accent-color);
+            }
+
+            & > input:focus {
+                border: 2px solid var(--accent-color);
+                outline: none;
+            }
+        }
+
+        & > #rememberWrapper {
+
+            width: 80%;
+            font-size: 14px;
+            & > #rememberForgot {
+
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+    
+                & > #rememberMe {
+                    display: inline-block;
+                    & > input {
+                        accent-color: var(--accent-color);
+                        transform: translateY(2px);
+                    }
+                }
+            }
+        }
+
+        & > #signButton {
+
+            width: 80%;
+            & > button {
+                width: 100%;
+                padding: 10px;
+
+                background-color: var(--accent-color);
+                border: 2px solid var(--accent-color);
+                border-radius: 2px;
+
+                color: white;
+                font-family: 'Poppins',sans-serif;
+                font-size: 1.5em;
+
+                cursor: pointer;
+                box-shadow: 0px 5px 15px gray;
+
+                transition-duration: 0.25s;
+
+            }
+
+            & > button:hover {
+                color: var(--accent-color);
+                background-color: white;
+            }
+        }
+
+        & > #otherLogins {
+            width: 80%;
+            text-align: center;
+
+            & > #optionWrapper {
+                display: flex;
+                justify-content: space-evenly;
+
+                & > button {
+
+                    height: 50px;
+                    width: 50px;
+
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 60%;
+
+                    border-radius: 10px;
+                    border: none;
+
+                    cursor: pointer;
+                    box-shadow: 0px 5px 15px gray;
+
+                    transition: all 0.25s, border-bottom 0.1s;
+                }
+
+                & > button:hover {
+                    transform: translateY(-5px);
+                    border-bottom: 4px solid var(--accent-color);
+                }
+
+                & > #google {
+                    background-image: url("icons/google.svg");
+                }
+
+                & > #facebook {
+                    background-image: url("icons/facebook.svg");
+                }
+
+                & > #twitter {
+                    background-image: url("icons/twitter.svg");
+                }
+            }
+        }
+
+        /*
+        & > * {
+            border: 1px solid black;
+        }
+            */
+    }
+}
+
+@keyframes popInOut {
+
+    0%, 49% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+}
